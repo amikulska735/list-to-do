@@ -7,14 +7,29 @@
     .form {
         grid-template-columns: 1fr;
     }
+    .tasks__header{
+        grid-template-columns: 1fr;
+    }
+    .buttons__button {
+       align-content: center;
+       width: 100%;
+       margin: 10px;
+    }
+    
 }
+
 .form__input {
     padding: 10px;
-    border: 1px solid gray;
+    border: 1px solid rgb(128, 128, 128);
 }
 .form__button {
     padding: 10px;
-    background: hsl(180, 100%, 25%);
-    color: white;
+    background: rgb(0, 104, 128);
+    transition: 1s;
+    color: rgb(255, 255, 255);
     border: none;
+}
+.form__button:hover {
+    background-color: rgb(25, 150, 172);
+    transform: scale(1.1);
 }

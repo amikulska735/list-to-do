@@ -9,11 +9,18 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(221, 221, 221);
     word-break: break-word;
 }
 .tasks__button--toggleDone {
-    background: hsl(120, 61%, 34%);
+    background: rgb(32, 124, 29);
+    transition: color 1s;
+}
+.tasks__button--toggleDone:hover {
+    background: rgb(29, 146, 37);
+}
+.tasks__button--toggleDone:active {
+    border: 2px solid rgb(0, 0, 0);
 }
 .emoji:before {
     content: '✔';
@@ -21,7 +28,7 @@
 }
 .tasks__button {
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     width: 30px;
     height: 30px;
     padding: 0;
@@ -30,5 +37,31 @@
     text-decoration: line-through;
 }
 .tasks__button--remove {
-    background: hsl(348, 83%, 47%);
+    background: rgb(219, 20, 20);
+    transition: color 1s;
 }
+.tasks__button--remove:hover {
+    background: rgb(250, 32, 32);
+}
+.tasks__button--remove:active {
+    border: 2px solid rgb(0, 0, 0);
+}
+.tasks__item--hidden {
+    display: none;
+}
+.tasks__header {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding: 0;  
+    margin: 0 20px;
+}
+@media(max-width: 767px) {
+    
+    .tasks__header{
+        grid-template-columns: 1fr;
+    }
+}
+
+
