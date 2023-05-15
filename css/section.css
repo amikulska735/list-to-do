@@ -10,3 +10,17 @@
 .section__body {
     padding: 20px;
 }
+.section__tasks {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    padding: 0;  
+    margin: 0 20px;
+}
+@media(max-width: 767px) {
+    
+    .section__tasks{
+        grid-template-columns: 1fr;
+    }
+}

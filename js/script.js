@@ -7,7 +7,6 @@
             ...tasks,
             { content: newTaskContent, done: false },
         ];
-
         render(); 
     };
 
@@ -30,14 +29,17 @@
         ];
         render();
     };
+
     const markAllTasksDone = () => {
         tasks = tasks.map((task) => ({ ...task, done: true}));
         render();
     };
+
     const toggleHideDoneTasks = () => {
         hideDoneTasks = !hideDoneTasks;
         render();
     };
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -76,6 +78,7 @@
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
     };
+
     const renderButtons = () => {
         const buttonsElement = document.querySelector(".js-buttons");
         if (!tasks.length) {
@@ -83,20 +86,21 @@
             return;
         };
         buttonsElement.innerHTML = `
-        <button class="buttons__button button--toggleHideDoneButtons js-toggleHideDoneButtons">
+        <button class="buttons__button button--toggleHideDoneButton js-toggleHideDoneButton">
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
         </button>
-        <button class="buttons__button  button--markAllDoneButtons js-markAllDoneButtons"
+        <button class="buttons__button  button--markAllDoneButton js-markAllDoneButton"
         ${tasks.every(({ done}) => done) ? "disabled" : ""}> Ukończ wszystkie 
         </button> `
         ;
     };
+    
     const bindButtonsEvents = () => {
-        const markAllDoneButton = document.querySelector(".js-markAllDoneButtons");
+        const markAllDoneButton = document.querySelector(".js-markAllDoneButton");
         if (markAllDoneButton)  {
         markAllDoneButton.addEventListener("click", markAllTasksDone);
         }  
-        const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneButtons");
+        const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneButton");
         if (toggleHideDoneTasksButton) {
             toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
         }
