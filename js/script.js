@@ -31,7 +31,7 @@
     };
 
     const markAllTasksDone = () => {
-        tasks = tasks.map((task) => ({ ...task, done: true}));
+        tasks = tasks.map((task) => ({ ...task, done: true }));
         render();
     };
 
@@ -97,10 +97,12 @@
     
     const bindButtonsEvents = () => {
         const markAllDoneButton = document.querySelector(".js-markAllDoneButton");
-        if (markAllDoneButton)  {
+
+        if 
+        (markAllDoneButton)  {
         markAllDoneButton.addEventListener("click", markAllTasksDone);
         }  
-        const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneButton");
+        const toggleHideDoneTasksButton = document.querySelector(".js-toggleHideDoneButton"); 
         if (toggleHideDoneTasksButton) {
             toggleHideDoneTasksButton.addEventListener("click", toggleHideDoneTasks);
         }
@@ -119,7 +121,8 @@
        const newTaskInput = document.querySelector(".js-newTask");
        const newTaskContent = newTaskInput.value.trim();
        
-       if(newTaskContent !== "") {
+       if
+       (newTaskContent !== "") {
         addNewTask(newTaskContent);
         newTaskInput.value = "";
        }
